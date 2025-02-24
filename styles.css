@@ -1,0 +1,44 @@
+body {
+
+    /*fonte do texto */
+    font-family: Arial, sans-serif;
+    background-color:rgb(115, 152, 163);
+    /* usa modelo FlexBox, conceito de caixa para posicionamento*/
+    display: flex;
+    justify-content: center; /* centraliza horizontalmente */
+    height: 100vh; /* altura da pagina, 100% do altura da página */
+    align-items: center; /* centraliza verticalmente */
+
+}
+
+.container{
+
+    background-color: rgba(220, 220, 220, 0.616);
+    padding: 40px; /* espaçamento interno */
+    border-radius: 10px; /* borda */
+    text-align: center; /* texto centralizado */
+    box-shadow: -3px 3px 9px; /*sombra*/
+
+}
+button{
+    background-color: grey;
+    color:rgb(255, 255, 255);
+    border: none;
+    /* 10 abaixo e acima e 20 esquerda e direita*/
+    padding: 10px 20px;
+}
+/*ao passar o mouse em cima do botão*/
+button:hover {
+    background-color:  rgb(63, 63, 63);
+
+}
+.foto {
+    /*borda arredondada*/
+    border-radius: 35%;
+    /*largura*/
+    width: 100px;
+    /*altura*/
+    height: 100px;
+    /* espaçamento externo abaixo*/
+    margin-bottom: 10px;
+}
