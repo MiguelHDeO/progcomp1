@@ -58,6 +58,45 @@ img{
     text-align: justify;
 }
 
-td {
+table tr td {
     padding: 20px;
+}
+
+table {
+    /* esp. externo de 0 acima e abaixo e auto a esq. e dir. */
+    margin: 0 auto; 
+    border: 1px solid grey;
+    border-collapse: collapse;
+    border-width: 2px;
+}
+
+tr, th, td {
+    border: 1px solid grey;
+    border-width: 2px;
+}
+
+.laranja {
+    background-color: rgb(240, 174, 53);
+}
+
+.azul {
+    background-color: rgb(20, 20, 156);
+    color: white;
+}
+
+.preto {
+    background-color: black;
+    color: white;
+}
+
+.roxo {
+    background-color: rgb(184, 69, 184);
+}
+
+.verde {
+    background-color: rgb(35, 180, 35);
+}
+
+.vermelho {
+    background-color: rgb(223, 40, 40);
 }
