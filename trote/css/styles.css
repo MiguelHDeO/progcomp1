@@ -100,3 +100,8 @@ tr, th, td {
 .vermelho {
     background-color: rgb(223, 40, 40);
 }
+
+.campos {
+    
+    margin: 20px;
+}
