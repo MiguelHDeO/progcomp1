@@ -16,8 +16,15 @@ function calcular(){
     let kitAvulso = document.getElementById("kitAvulso").value
     soma = soma + Number(30 * kitAvulso)
     
+    let oleo = document.getElementById("oleo").value
+    soma = soma + Number(oleo)
+
     let suplementoAvulso = document.getElementById("suplementoAvulso").value
     soma = soma + Number(15 * Number(suplementoAvulso))
+
+    let macarrao = document.getElementById("macarrao").value
+    soma = soma + (0.5 * Number(macarrao))
+
     //devolve o resultadop para HTML
     document.getElementById("soma").innerHTML = soma.toFixed(2)
 }
