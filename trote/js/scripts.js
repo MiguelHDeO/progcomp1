@@ -25,6 +25,18 @@ function calcular(){
     let macarrao = document.getElementById("macarrao").value
     soma = soma + (0.5 * Number(macarrao))
 
+    let arroz5kg = document.getElementById("arroz5kg").value
+    soma = soma + (5 * Number(arroz5kg))
+
+    let arroz1kg = document.getElementById("arroz1kg").value
+    soma = soma + Number(arroz1kg)
+
+    let feijão2kg = document.getElementById("feijão2kg").value
+    soma = soma + (2 * Number(feijão2kg))
+
+    let feijão1kg = document.getElementById("feijão1kg").value
+    soma = soma + Number(feijão1kg)
+
     //devolve o resultadop para HTML
     document.getElementById("soma").innerHTML = soma.toFixed(2)
 }
