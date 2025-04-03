@@ -68,6 +68,7 @@ table {
     border: 1px solid grey;
     border-collapse: collapse;
     border-width: 2px;
+    
 }
 
 tr, th, td {
@@ -104,5 +105,17 @@ tr, th, td {
 .campos {
     
     margin: 20px;
+}
+
+.title{
+    text-align: center;
+    align-items: center;
+    padding-top: 5px;
+    
+}
+
+.textTable{
+    border-collapse: collapse;
+    border: 1px white;
 }
 

@@ -1,4 +1,5 @@
-function calcular(){
+function calcular()
+{
     // declaração de variável sem tipo
     
     // recupera o valor da ação social digitado
@@ -22,7 +23,8 @@ function calcular(){
 
     let equipe = document.getElementById("equipe").value
     let pontosKitSup = 0 // guarda pontuação do kit
-    if (equipe == "Laranja"){
+    if (equipe == "Laranja")
+    {
         // esquipe é laranja
         if  (kit >= 97 && suplemento >=49){
             pontosKitSup = 5000 + ((kit - 97)* 30) + ((suplemento - 49) * 15)
@@ -36,10 +38,76 @@ function calcular(){
         else if (kit >=19 && suplemento >=10){
             pontosKitSup = 1000 + ((kit - 19)* 30) + ((suplemento - 25) * 15)
         }
-        else if (kit < 19 && suplemento <10){
-            pontosKitSup = (kit * 30) + ((suplemento * 15))
+    }    
+
+    if (equipe == "Preta")
+    {
+        if  (kit >= 103 && suplemento >=52){
+            pontosKitSup = 5000 + ((kit - 103)* 30) + ((suplemento - 52) * 15)
+        }
+        else if (kit >= 82 && suplemento >=42){
+            pontosKitSup = 4000 + ((kit - 82)* 30) + ((suplemento - 42) * 15)
+        }
+        else if (kit >= 52 && suplemento >=26){
+            pontosKitSup = 2500 + ((kit - 52)* 30) + ((suplemento - 26) * 15)
+        }
+        else if (kit >=21 && suplemento >=10){
+            pontosKitSup = 1000 + ((kit - 21)* 30) + ((suplemento - 10) * 15)
         }
     }
+    
+    if (equipe == "Roxa")
+    {
+        if  (kit >= 102 && suplemento >=51){
+            pontosKitSup = 5000 + ((kit - 102)* 30) + ((suplemento - 51) * 15)
+        }
+        else if (kit >= 82 && suplemento >=41){
+            pontosKitSup = 4000 + ((kit - 82)* 30) + ((suplemento - 41) * 15)
+        }
+        else if (kit >= 51 && suplemento >=26){
+            pontosKitSup = 2500 + ((kit - 51)* 30) + ((suplemento - 26) * 15)
+        }
+        else if (kit >=20 && suplemento >=10){
+            pontosKitSup = 1000 + ((kit - 20)* 30) + ((suplemento - 10) * 15)
+        }
+    } 
+
+    if (equipe == "Verde")
+    {
+        if  (kit >= 88 && suplemento >=44){
+            pontosKitSup = 5000 + ((kit - 88)* 30) + ((suplemento - 44) * 15)
+        }
+        else if (kit >= 70 && suplemento >=35){
+            pontosKitSup = 4000 + ((kit - 70)* 30) + ((suplemento - 35) * 15)
+        }
+        else if (kit >= 44 && suplemento >=22){
+            pontosKitSup = 2500 + ((kit - 44)* 30) + ((suplemento - 22) * 15)
+        }
+        else if (kit >=18 && suplemento >=9){
+            pontosKitSup = 1000 + ((kit - 18)* 30) + ((suplemento - 9) * 9)
+        }
+    } 
+
+    if (equipe == "Vermelha")
+    {
+        if  (kit >= 93 && suplemento >=47){
+            pontosKitSup = 5000 + ((kit - 93)* 30) + ((suplemento - 47) * 15)
+        }
+        else if (kit >= 74 && suplemento >=38){
+            pontosKitSup = 4000 + ((kit - 74)* 30) + ((suplemento - 38) * 15)
+        }
+        else if (kit >= 47 && suplemento >=24){
+            pontosKitSup = 2500 + ((kit - 47)* 30) + ((suplemento - 24) * 15)
+        }
+        else if (kit >=19 && suplemento >=9){
+            pontosKitSup = 1000 + ((kit - 19)* 30) + ((suplemento - 9) * 9)
+        }
+    } 
+        
+
+    
+       
+
     alert(pontosKitSup)    
     
     let oleo = document.getElementById("oleo").value
