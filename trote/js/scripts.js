@@ -23,9 +23,27 @@ function calcular()
     soma = soma + Number(30 * kit);
     //recupera cor da equipe
 
+    let oleo = document.getElementById("oleo").value;
+    soma = soma + Number(oleo);
+
+    let macarrao = document.getElementById("macarrao").value
+    soma = soma + (0.5 * Number(macarrao))
+
+    let arroz5kg = document.getElementById("arroz5kg").value;
+    soma = soma + (5 * Number(arroz5kg));
+
+    let arroz1kg = document.getElementById("arroz1kg").value;
+    soma = soma + Number(arroz1kg);
+
+    let feijao2kg = document.getElementById("feijao2kg").value;
+    soma = soma + (2 * Number(feijao2kg));
+
+    let feijao1kg = document.getElementById("feijao1kg").value;
+    soma = soma + Number(feijao1kg);
+
     let equipe = document.getElementById("equipe").value;
     let pontosKitSup = 0; // guarda pontuação do kit
-    if (equipe == "Laranja");
+    if (equipe == "Laranja")
     {
         // esquipe é laranja
         if  (kit >= 97 && suplemento >=49){
@@ -41,7 +59,7 @@ function calcular()
             pontosKitSup = 1000 + ((kit - 19)* 30) + ((suplemento - 25) * 15);
         }
     }    
-    else if (equipe == "Preta");
+    else if (equipe == "Preta")
     {
         if  (kit >= 103 && suplemento >=52){
             pontosKitSup = 5000 + ((kit - 103)* 30) + ((suplemento - 52) * 15);
@@ -56,7 +74,7 @@ function calcular()
             pontosKitSup = 1000 + ((kit - 21)* 30) + ((suplemento - 10) * 15);
         }
     }
-    else if (equipe == "Roxa");
+    else if (equipe == "Roxa")
     {
         if  (kit >= 102 && suplemento >=51){
             pontosKitSup = 5000 + ((kit - 102)* 30) + ((suplemento - 51) * 15);
@@ -71,7 +89,7 @@ function calcular()
             pontosKitSup = 1000 + ((kit - 20)* 30) + ((suplemento - 10) * 15);
         }
     }
-    else if (equipe == "Verde");
+    else if (equipe == "Verde")
     {
         if  (kit >= 88 && suplemento >=44){
             pontosKitSup = 5000 + ((kit - 88)* 30) + ((suplemento - 44) * 15);
@@ -115,29 +133,29 @@ function calcular()
         }
         else if (equipe == "Preta"){
                 // equipe é laranja
-                if  (sangue >= 52);
+                if  (sangue >= 52)
                 {
                     pontosSangue = 2500 + ((sangue - 52)* 20); 
                 }
-                else (sangue < 52);
+                else (sangue < 52)
                 {
                     pontosSangue = (sangue * 20) ;
                 }
         }
         else if (equipe == "Roxa"){
             // equipe é laranja
-            if  (sangue >= 51);
+            if  (sangue >= 51)
             {
                 pontosSangue = 2500 + ((sangue - 51)* 20); 
             }
-            else (sangue < 51);
+            else (sangue < 51)
             {
                 pontosSangue = (sangue * 20) ;
             }
         }
         else if (equipe == "Verde"){
             // equipe é laranja
-            if  (sangue >= 44);
+            if  (sangue >= 44)
             {
                 pontosSangue = 2500 + ((sangue - 44)* 20) ;
             }
@@ -148,7 +166,7 @@ function calcular()
         }
         else {
             // equipe é laranja
-            if  (sangue >= 47);
+            if  (sangue >= 47)
             {
                 pontosSangue = 2500 + ((sangue - 47)* 20); 
             }
@@ -157,29 +175,13 @@ function calcular()
                 pontosSangue = (sangue * 20) ;
             }
         }   
-    
-    let oleo = document.getElementById("oleo").value;
-    soma = soma + Number(oleo);
-
-    let macarrao = document.getElementById("macarrao").value
-    soma = soma + (0.5 * Number(macarrao))
-
-    let arroz5kg = document.getElementById("arroz5kg").value;
-    soma = soma + (5 * Number(arroz5kg));
-
-    let arroz1kg = document.getElementById("arroz1kg").value;
-    soma = soma + Number(arroz1kg);
-
-    let feijao2kg = document.getElementById("feijao2kg").value;
-    soma = soma + (2 * Number(feijao2kg));
-
-    let feijao1kg = document.getElementById("feijao1kg").value;
-    soma = soma + Number(feijao1kg);
  
     soma = soma + pontosKitSup + pontosSangue;
+   
     console.log(soma);
 
-    alert(soma);
+    
     //devolve o resultado para HTML
     document.getElementById("soma").innerHTML = soma.toFixed(2);
+    alert(soma);
 }
