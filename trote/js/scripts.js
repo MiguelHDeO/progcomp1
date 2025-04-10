@@ -4,6 +4,8 @@ function calcular()
     
     // recupera o valor da ação social digitado
     let soma = 0;
+    let pontosSangue = 0;
+    let pontosKitSup = 0; // guarda pontuação do kit
 
     
 
@@ -25,7 +27,7 @@ function calcular()
     soma = soma + Number(oleo);
 
     let macarrao = document.getElementById("macarrao").value
-    soma = soma + (0.5 * Number(macarrao))
+    soma = soma + (0.5 * Number(macarrao));
 
     let arroz5kg = document.getElementById("arroz5kg").value;
     soma = soma + (5 * Number(arroz5kg));
@@ -40,7 +42,6 @@ function calcular()
     soma = soma + Number(feijao1kg);
 
     let equipe = document.getElementById("equipe").value;
-    let pontosKitSup = 0; // guarda pontuação do kit
     if (equipe == "Laranja"){
         // equipe é laranja
         if  (kit >= 97 && suplemento >=49){
@@ -113,8 +114,7 @@ function calcular()
         }
     } 
 
-    let (sangue) = document.getElementById("sangue").value;
-    let pontosSangue = 0;
+    let sangue = document.getElementById("sangue").value;
     if (equipe == "Laranja"){
         // equipe é laranja
         if  (sangue >= 49){
@@ -164,7 +164,7 @@ function calcular()
         }
     }   
  
-    alert(pontosKitSup);
+    console.log(soma);
     soma = soma + pontosKitSup + pontosSangue;
    
     //devolve o resultado para HTML
