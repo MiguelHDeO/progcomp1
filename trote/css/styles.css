@@ -6,21 +6,22 @@ body {
     text-align: center;
 }
 header{
-    background: #28a745;
+    background: #295f99;
     color: white;
     /* espaçamento interno 15px acima e abaixo, e 0px esquerda e direita*/
     padding: 15px 0; 
     font-size: 24px;
-    border: 1px solid black;
+    border: 2px solid #204b79;
 }
 nav {
-    background-color: #007bff;
+    background-color: #295f99;
     padding: 12px; 
     display: flex; /* Flex boxing*/
     /* alinhamento na horizontal - espaço entre os links*/
     justify-content: space-between;
     /* alinhamento na vertical */ 
     align-items: center;
+    border: 2px solid #295f99;
 }
 #links-menu { /* para se referenciar um id se usa "#" */
     display: flex;
@@ -32,8 +33,9 @@ nav a{
     text-decoration: none; /*não faz decorção do link*/
     padding: 10px 15px; /*10px acima e abaixo 15px é esquerda e direita*/
     font-size: 18px; /* tamanho da fonte*/
-    background: #005663; /*cor de fundo*/
+    background: #295f99; /*cor de fundo*/
     border-radius: 5px; /*borda com canto arredondado*/
+    
   
 }
 nav a:hover {
@@ -122,5 +124,11 @@ tr, th, td {
 li {
 padding: 5px;
     
+}
+
+.campoCal{
+    
+    display: flex;
+    justify-content: space-between;
 }
 
