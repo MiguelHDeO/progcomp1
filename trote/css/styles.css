@@ -74,10 +74,11 @@ table {
 tr, th, td {
     border: 1px solid grey;
     border-width: 2px;
+    text-align: center;
 }
 
 .laranja {
-    background-color: rgb(240, 174, 53);
+    background-color: rgb(255, 149, 28);
 }
 
 .azul {
@@ -109,12 +110,17 @@ tr, th, td {
 .title{
     text-align: center;
     align-items: center;
-    padding-top: 5px;
+    padding: 10px;
     
 }
 
 .textTable{
     border-collapse: collapse;
     border: 1px white;
+}
+
+li {
+padding: 5px;
+    
 }
 
