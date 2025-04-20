@@ -127,8 +127,16 @@ padding: 5px;
 }
 
 .campoCal{
-    
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgb(247, 243, 243);
+    /*espaçamento interno nos 4 lados*/
+    padding: 10px;
+    text-align: justify;
     display: flex;
     justify-content: space-between;
 }
+
+
 
