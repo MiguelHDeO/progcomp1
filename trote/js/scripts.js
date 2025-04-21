@@ -9,37 +9,32 @@ function calcular()
 
     
 
-    let acaoSocial = document.getElementById("acaoSocial").value;
-    soma = soma + Number(acaoSocial);
-    // recupera o valor da homenagem digitado
-    let homenagem = document.getElementById("homenagem").value;
-    soma = soma + Number(homenagem);
-    // '' valor do leite
-    let leite = document.getElementById("leite").value;
-    soma = soma + Number(2 * Number(leite));
+    let acaoSocial = Number(document.getElementById("acaoSocial").value);
+    soma = soma + acaoSocial;
+    
+    let homenagem = Number(document.getElementById("homenagem").value);
+    soma = soma + homenagem;
+    
+    let leite = Number(document.getElementById("leite").value);
+    soma = soma + (2 * leite);
 
     let suplemento = Number(document.getElementById("suplemento").value);
+    soma = soma + (suplemento * 15);
 
     let kit = Number(document.getElementById("kit").value);
-    //recupera cor da equipe
+    soma = soma + (kit * 30);
 
-    let oleo = document.getElementById("oleo").value;
-    soma = soma + Number(oleo);
+    let oleo = Number(document.getElementById("oleo").value);
+    soma = soma + oleo;
 
-    let macarrao = document.getElementById("macarrao").value
-    soma = soma + (0.5 * Number(macarrao));
+    let macarrao = Number(document.getElementById("macarrao").value);
+    soma = soma + (0.5 * macarrao);
 
-    let arroz5kg = document.getElementById("arroz5kg").value;
-    soma = soma + (5 * Number(arroz5kg));
+    let arrozkg = Number(document.getElementById("arrozkg").value);
+    soma = soma + arrozkg;
 
-    let arroz1kg = document.getElementById("arroz1kg").value;
-    soma = soma + Number(arroz1kg);
-
-    let feijao2kg = document.getElementById("feijao2kg").value;
-    soma = soma + (2 * Number(feijao2kg));
-
-    let feijao1kg = document.getElementById("feijao1kg").value;
-    soma = soma + Number(feijao1kg);
+    let feijaokg = Number(document.getElementById("feijaokg").value);
+    soma = soma + feijaokg;
 
     let equipe = document.getElementById("equipe").value;
     if (equipe == "Laranja"){
@@ -54,7 +49,10 @@ function calcular()
             pontosKitSup = 2500 + ((kit - 49)* 30) + ((suplemento - 25) * 15);
         }
         else if (kit >=19 && suplemento >=10){
-            pontosKitSup = 1000 + ((kit - 19)* 30) + ((suplemento - 25) * 15);
+            pontosKitSup = 1000 + ((kit - 19)* 30) + ((suplemento - 10) * 15);
+        }
+        else {
+            pontosKitSup = 0
         }
     }    
     else if (equipe == "Preta"){
@@ -70,6 +68,9 @@ function calcular()
         else if (kit >=21 && suplemento >=10){
             pontosKitSup = 1000 + ((kit - 21)* 30) + ((suplemento - 10) * 15);
         }
+        else {
+            pontosKitSup = 0
+        }
     }
     else if (equipe == "Roxa"){
         if  (kit >= 102 && suplemento >=51){
@@ -83,6 +84,9 @@ function calcular()
         }
         else if (kit >=20 && suplemento >=10){
             pontosKitSup = 1000 + ((kit - 20)* 30) + ((suplemento - 10) * 15);
+        }
+        else {
+            pontosKitSup = 0
         }
     }
     else if (equipe == "Verde"){
@@ -98,6 +102,9 @@ function calcular()
         else if (kit >=18 && suplemento >=9){
             pontosKitSup = 1000 + ((kit - 18)* 30) + ((suplemento - 9) * 9);
         }
+        else {
+            pontosKitSup = 0
+        }
     } 
     else{
         if  (kit >= 93 && suplemento >=47){
@@ -112,9 +119,12 @@ function calcular()
         else if (kit >=19 && suplemento >=9){
             pontosKitSup = 1000 + ((kit - 19)* 30) + ((suplemento - 9) * 9);
         }
+        else {
+            pontosKitSup = 0
+        }
     } 
 
-    let sangue = document.getElementById("sangue").value;
+    let sangue = Number(document.getElementById("sangue").value);
     if (equipe == "Laranja"){
         // equipe é laranja
         if  (sangue >= 49){
