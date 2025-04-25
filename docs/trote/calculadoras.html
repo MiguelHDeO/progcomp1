@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Trote Solidário - 2025</title>
+        <link rel="stylesheet" href="css/styles.css"/>
+        <!-- ctlr + spaço aparece todos os caminhos de arquivo -->
+    </head>
+    <body>
+        <header> <!-- cabeçalho do corpo da página-->
+            Trote Solidário - 2025
+        </header>
+        <nav>
+               <div id="links-menu">
+                    <a href="index.html"> Home </a>
+                    <a href="introducao.html"> Introdução </a>
+                    <a href="objetivo.html"> Objetivo </a>
+                    <a href="formato.html"> formato </a>
+                    <a href="gincana.html"> gincana </a>
+                    <a href="integracao.html"> Integração </a>
+                    <a href="observacoes.html"> Observações</a>
+                    <a href="calculadoras.html"> Calculadoras</a>
+               </div>
+               <img src="images/trote_solidario_2025_edited-768x753.jpg" alt="Trote Solidário"/>
+        </nav>
+        <div class="container">
+
+
+            <h2>Calculadoras de Pontuação</h2>
+            <form><!-- Formulário para entrada de dados do usuário -->
+                <div class="title"> 
+                    <label> <strong>Selecione a cor da equipe:</strong> <br></label>
+                    <select id="equipe">
+                        <option value="Laranja"> Laranja </option>
+                        <option value="Preta"> Preta </option>
+                        <option value="Roxa"> Roxa </option>
+                        <option value="Verde"> Verde </option>
+                        <option value="Vermelha"> Vermelha </option>
+                    </select>   
+                </div>
+
+                <div class="campoCal">
+                    <label> Ação social (pts)</label>
+                    <input type="number" id="acaoSocial"/>
+                </div>
+
+                <div class="campoCal">
+                    <label> Homenagem (pts)</label>
+                    <input type="number" id="homenagem"/>
+                </div>
+
+                <div class="campoCal">
+                    <label> Caixas de Leite (litros)</label>
+                    <input type="number" id="leite">
+                </div>
+
+                <div class="campoCal"> 
+                    <label> Kit Alimentação </label>
+                    <input type="number" id="kit" />
+                </div>
+
+                <div class="campoCal"> 
+                    <label> Lata de suplemento </label>
+                    <input type="number" id="suplemento"/>
+                </div>
+
+                <div class="campoCal"> 
+                    <label> Óleo </label>
+                    <input type="number" id="oleo"/>
+                </div>
+
+                <div class="campoCal"> 
+                    <label> Macarrão </label>
+                    <input type="number" id="macarrao"/>
+                </div>
+
+                <div class="campoCal"> 
+                    <label> Arroz (Por KG) </label>
+                    <input type="number" id="arrozkg"/>
+                </div>
+
+                <div class="campoCal"> 
+                    <label> Feijão (Por KG) </label>
+                    <input type="number" id="feijaokg"/>
+                </div>
+
+                <div class="campoCal"> 
+                    <label> Doação de Sangue </label>
+                    <input type="number" id="sangue"/>
+                </div>
+
+                <div class="campoCal">
+                    <button type="button" onclick="calcular()"> Calcular </button>
+                    <label id="soma"> </label>
+                </div>
+
+                
+            </form>
+            
+            
+        </div>
+    </body>
+    <script src="js/scripts.js"> </script> 
+</html>
