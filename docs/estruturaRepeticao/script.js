@@ -21,7 +21,7 @@
 
     if (nota >= 8){
         satisfeitos++;
-    } else if (nota <= 5 ){
+    } else if (nota < 5 ){
         insatisfeitos++;
     }
 
