@@ -87,3 +87,22 @@ function exe1(){
     
 }
 
+function exe2(){
+    let preco = 5.0;
+    let qtd = 120;
+    const despesa = 200;
+    let lucro = 0;
+   
+
+    while (preco >= 1){
+        lucro = ((preco * qtd) - despesa);
+
+        alert (`preço ${preco} - qtd ${qtd} - despesa: ${despesa} - lucro ${lucro}`);
+        
+        preco = preco - 0.5;
+        qtd = qtd + 26;
+        
+    }
+  
+}
+
