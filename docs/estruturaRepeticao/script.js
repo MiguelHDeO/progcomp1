@@ -145,7 +145,7 @@ function exe5(){
 }
 
 function exe6(){
-    let codigo, valor, v, p, pp, somaV, somaP, somaPP;
+    let codigo, valor = 0, v = 0, p = 0, pp = 0, somaV = 0, somaP = 0, somaPP = 0;
 
     for(let cont = 1; cont <= 5; cont++){
 
