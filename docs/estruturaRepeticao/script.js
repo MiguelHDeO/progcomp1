@@ -92,17 +92,84 @@ function exe2(){
     let qtd = 120;
     const despesa = 200;
     let lucro = 0;
+    let aux = ""
+    let lucroM = 0, qtdM = 0, precoM = 0
    
 
     while (preco >= 1){
         lucro = ((preco * qtd) - despesa);
 
-        alert (`preço ${preco} - qtd ${qtd} - despesa: ${despesa} - lucro ${lucro}`);
+        if(lucro > lucroM){
+            lucroM = lucro;
+            precoM = preco;
+            qtdM = qtd;
+
+        }
+        aux = aux + (`\nPreço: ${preco} - Quantidade: ${qtd} - Despesa: ${despesa} - Lucro ${lucro}\n`);
         
+        if(lucro > lucroM){
+            lucroM = lucro
+        }
+
         preco = preco - 0.5;
         qtd = qtd + 26;
         
     }
-  
+  alert(aux);
+  alert(`Maior lucro: ${lucroM} Com preço: ${precoM} e Quantidade: ${qtdM}`);
+}
+
+function exe4(){
+    let numero;
+    let resultado
+
+    numero = Number(prompt(`informe o valor para fazer a tabuada`));
+
+
+    for(let conta = 1; conta <= 10; conta++ ){
+        
+        resultado = numero * conta;
+        console.log(`\n${numero} x ${conta} == ${resultado}`);
+    }
+}
+
+function exe5(){
+
+    for(let cont = 1; cont <= 10; cont++){
+        for(let conta = 1; conta <= 10; conta++){
+            
+            console.log(`\n${cont} x ${conta} = ${cont*conta}`);
+        }
+    }
+    
+}
+
+function exe6(){
+    let codigo, valor, v, p, pp, somaV, somaP, somaPP;
+
+    for(let cont = 1; cont <= 5; cont++){
+
+        codigo = prompt(`Informe o código do tipo de transação`);
+        valor = Number(prompt(`\nInforme o valor da transação`));
+
+        if(codigo == `V`){
+            v += valor
+        }else if(codigo == `P`){
+            p += valor
+            pp += valor / 3
+        }else{
+            alert(`o código digitado é inválido`)
+        }
+
+        somaV += v
+        somaP += p
+        somaPP += pp
+
+        console.log(`valor total das contas a vista: R$${somaV}\n`)
+        console.log(`valor total das contas a prazo: R$${somaP}\n`)
+        console.log(`valor total primeiras parcelas: R$${somaPP}\n`)
+
+        
+    }
 }
 
