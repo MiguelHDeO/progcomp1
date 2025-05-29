@@ -145,31 +145,72 @@ function exe5(){
 }
 
 function exe6(){
-    let codigo, valor = 0, v = 0, p = 0, pp = 0, somaV = 0, somaP = 0, somaPP = 0;
+    let codigo, valor, v = 0, p = 0, pp = 0, somaV = 0, somaP = 0, somaPP = 0;
 
     for(let cont = 1; cont <= 5; cont++){
+        do{
+        codigo = prompt(`Informe o código do tipo de transação(V à vista ou P à prazo)`);
+        
+        }while( codigo != `V` && codigo !=`P`)
+            
+        do {
+            valor = Number(prompt(`\nInforme o valor da transação`))
+        }while (valor < 0)
 
-        codigo = prompt(`Informe o código do tipo de transação`);
-        valor = Number(prompt(`\nInforme o valor da transação`));
-
-        if(codigo == `V`){
+        if (codigo == `V`){
             v += valor
-        }else if(codigo == `P`){
+
+            somaV += v;
+        }
+        else {
             p += valor
-            pp += valor / 3
-        }else{
-            alert(`o código digitado é inválido`)
+            pp += p/ 3
+
+            somaP += p;
+            somaPP += pp;
         }
 
-        somaV += v
-        somaP += p
-        somaPP += pp
+        
+        
 
-        console.log(`valor total das contas a vista: R$${somaV}\n`)
-        console.log(`valor total das contas a prazo: R$${somaP}\n`)
-        console.log(`valor total primeiras parcelas: R$${somaPP}\n`)
+        console.log(`valor total das contas a vista: R$${somaV}\n`);
+        console.log(`valor total das contas a prazo: R$${somaP}\n`);
+        console.log(`valor total primeiras parcelas: R$${somaPP}\n`);
 
         
     }
+}
+function exe7(){
+    let idade, altura, peso, maior50 = 0, kg40 = 0, somaAltura= 0, qtde= 0;
+
+    for(let conta = 1; conta <= 5; conta++){
+        do{
+            idade = Number(prompt(`Informe sua idade: `));
+        }while( idade < 0);
+        do{
+            altura = Number(prompt(`\nInforme sua altura: `));
+        }while( altura < 0);
+        do{
+            peso = Number(prompt(`\nInforme seu peso: `));
+        }while(peso < 0);
+
+        if(idade > 50){
+            maior50++;
+        }
+
+        if(idade >= 10 && idade <= 20){
+            somaAltura = somaAltura + altura
+            qtde++
+        }
+
+        if(peso < 40){
+            kg40++;
+        }
+    }
+       
+        console.log(`Quantidade de pessoas com idade a cima de 50: ${maior50}\n`);
+        console.log(`Media da altura das pessoas entre 10 e 20 anos: ${somaAltura / qtde}\n`);
+        console.log(`Porcentagem de pessoas com peso inferior a 40kg:${kg40 / 5 * 100}%\n`);
+
 }
 
