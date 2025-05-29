@@ -154,7 +154,7 @@ function exe6(){
 
         if(codigo == `V`){
             v += valor
-        }else if(codigo == `P`){+-.-+.+-+
+        }else if(codigo == `P`){
             p += valor
             pp += valor / 3
         }else{
