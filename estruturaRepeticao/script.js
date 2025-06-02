@@ -1,13 +1,13 @@
- function pesquisaSatisfacao(){
-   let totalNotas = 0;
-   totalNotas = Number(totalNotas)
-   let satisfeitos = 0;
-   satisfeitos = Number(satisfeitos)
-   let insatisfeitos = 0;
-   insatisfeitos = Number(insatisfeitos)
-   let contador = 0;
-   contador = Number(contador)
-   while(contador < 10 ){
+function pesquisaSatisfacao(){
+    let totalNotas = 0;
+    totalNotas = Number(totalNotas)
+    let satisfeitos = 0;
+    satisfeitos = Number(satisfeitos)
+    let insatisfeitos = 0;
+    insatisfeitos = Number(insatisfeitos)
+    let contador = 0;
+    contador = Number(contador)
+    while(contador < 10 ){
     let nota = window.prompt(`Participante ${contador + 1}: Digite uma nota referente a sua satisfação (0 a 10)`);
     nota = Number(nota)
     if (nota < 0 || nota > 10){
@@ -94,7 +94,7 @@ function exe2(){
     let lucro = 0;
     let aux = ""
     let lucroM = 0, qtdM = 0, precoM = 0
-   
+
 
     while (preco >= 1){
         lucro = ((preco * qtd) - despesa);
@@ -115,8 +115,8 @@ function exe2(){
         qtd = qtd + 26;
         
     }
-  alert(aux);
-  alert(`Maior lucro: ${lucroM} Com preço: ${precoM} e Quantidade: ${qtdM}`);
+alert(aux);
+alert(`Maior lucro: ${lucroM} Com preço: ${precoM} e Quantidade: ${qtdM}`);
 }
 
 function exe4(){
@@ -207,7 +207,7 @@ function exe7(){
             kg40++;
         }
     }
-       
+
         console.log(`Quantidade de pessoas com idade a cima de 50: ${maior50}\n`);
         console.log(`Media da altura das pessoas entre 10 e 20 anos: ${somaAltura / qtde}\n`);
         console.log(`Porcentagem de pessoas com peso inferior a 40kg:${kg40 / 5 * 100}%\n`);
@@ -252,9 +252,9 @@ function exe8(){
         }
     }
 
-    console.log(`A quantidade de pessoas com idade superior a 50 e peso inferior a 60KG é: ${sup50}`)
-    console.log(`A media da idade das pessoa com menos de 1.5 de altura é: ${mediaidade/contidd}`)
-    console.log(`A porcentagem de pessoas com olhos azuis dentre o total: ${contA*100/6}`)
-    console.log(`Quantidade de pessoas de cabelo ruivo que não tem olhos azuis: ${contRnaoAzul}`)
+    console.log(`A quantidade de pessoas com idade superior a 50 e peso inferior a 60KG é: ${sup50}`);
+    console.log(`A media da idade das pessoa com menos de 1.5 de altura é: ${mediaidade/contidd}`);
+    console.log(`A porcentagem de pessoas com olhos azuis dentre o total: ${contA*100/6}`);
+    console.log(`Quantidade de pessoas de cabelo ruivo que não tem olhos azuis: ${contRnaoAzul}`);
 }
 
