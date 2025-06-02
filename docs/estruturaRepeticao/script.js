@@ -213,4 +213,48 @@ function exe7(){
         console.log(`Porcentagem de pessoas com peso inferior a 40kg:${kg40 / 5 * 100}%\n`);
 
 }
+function exe8(){
+    let corOlho, corCabelo, idade, peso, altura, sup50 = 0, mediaidade= 0, contidd= 0, contA = 0, contRnaoAzul = 0;
+
+    for(let conta = 1; conta <= 6; conta++){
+        do{
+            idade = Number(prompt(`Informe sua idade: `));
+        }while( idade < 0);
+        do{
+            peso = Number(prompt(`Informe seu peso: `));
+        }while( peso < 0);
+        do{
+            altura = Number(prompt(`Informe sua altura: `));
+        }while( altura < 0);
+
+        do{
+            corOlho = Number(prompt(`Informe a cor do seu Olho (A -- azul, P -- preto, V -- verde, C -- castanho): `));
+        }while( corOlho != A || P || V || C);
+        do{
+            corCabelo = Number(prompt(`Informe a cor do seu Cabelo (L -- louro, P -- preto, R -- ruivo, C -- castanho): `));
+        }while( corCabelo != L || P || R || C);
+
+        if(idade >50 && peso < 60){
+            sup50++;
+        }
+
+        if(altura < 1.5){
+            mediaidade += idade;
+            contidd++;
+        }
+
+        if(corOlho == A){
+            contA++;
+        }
+
+        if(corCabelo == R && corOlho != A ){
+            contRnaoAzul++;
+        }
+    }
+
+    console.log(`A quantidade de pessoas com idade superior a 50 e peso inferior a 60KG é: ${sup50}`)
+    console.log(`A media da idade das pessoa com menos de 1.5 de altura é: ${mediaidade/contidd}`)
+    console.log(`A porcentagem de pessoas com olhos azuis dentre o total: ${contA*100/6}`)
+    console.log(`Quantidade de pessoas de cabelo ruivo que não tem olhos azuis: ${contRnaoAzul}`)
+}
 
