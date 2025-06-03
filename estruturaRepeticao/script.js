@@ -258,3 +258,69 @@ function exe8(){
     console.log(`Quantidade de pessoas de cabelo ruivo que não tem olhos azuis: ${contRnaoAzul}`);
 }
 
+function exe9(){
+    let peso, idade, altura, mediaIdade, peso90 = 0, pessoa1_9 = 0, porcentagem = 0;
+
+    for(let i = 0; i < 10; i++){
+        peso = Number(prompt(`Pessoa ${i} informe seu peso: `));
+        idade = Number(prompt(`Pessoa ${i} informe sua idade: `));
+        altura = Number(prompt(`Pessoa ${i} informe sua altura: `));
+    }
+
+    for(let i = 0; i <10 ; i++){
+       mediaIdade += idade;
+       if(peso > 90 && altura < 1.50){
+        peso90++;
+       }
+       if(altura > 1.9){
+        pessoa1_9++;
+        if(idade >= 10 && idade <= 30){
+            porcentagem++;
+        }
+
+       }
+    }
+
+    console.log(`Média da idade ${mediaIdade/10}`);
+    console.log(`quantidade de pessoas com peso superior a 90 e altura inferior a 1.5: ${peso90}`);
+    console.log(`porcentagem de pessoas com altura superior a 1.9 e idade entre 10 e 30 anos: ${porcentagem*100/pessoa1_9} `);
+}
+
+function exe10(){
+    let i = 0;
+let num;
+let somaPares = 0;
+let somaPrimos = 0;
+
+while (i < 10) {
+  num = Number(prompt("Digite o número " + (i + 1) + ":"));
+
+
+  if (num % 2 === 0) {
+    somaPares = somaPares + num;
+  }
+
+
+  let div = 1;
+  let contDiv = 0;
+
+  while (div <= num) {
+    if (num % div === 0) {
+      contDiv = contDiv + 1;
+    }
+    div = div + 1;
+  }
+
+  if (contDiv === 2) {
+    somaPrimos = somaPrimos + num;
+  }
+
+  i = i + 1;
+}
+
+console.log("Soma dos números pares: " + somaPares);
+console.log("Soma dos números primos: " + somaPrimos);
+
+
+}
+
