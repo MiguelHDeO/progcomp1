@@ -7,9 +7,9 @@ function exe2(){
 
     for(let i=0; i<10; i++){
         if(i % 2 == 0){
-            vet[i] = vet[i] + 10
+            pares[i] = vet[i] + 10
         }else{
-            vet[i] = vet[i] * 5
+            impares[i] = vet[i] * 5
         }
     }
 
