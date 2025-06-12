@@ -63,6 +63,7 @@ function exe1(){
     let grupo = 1
     while (grupo <= 5){
         let conta = 1
+        //sorting
         a = Number(prompt(`informe o valor de A`));
         b = Number(prompt(`informe o valor de B`));
         c = Number(prompt(`informe o valor de C`));

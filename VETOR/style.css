@@ -1,0 +1,15 @@
+body{
+    font-family: arial, sans-serif;
+    display: flex;
+    padding: 12px;   
+}
+
+button{
+    padding: 5px;
+}
+
+#links-menu{
+    display: flex;
+    gap: 15px;
+
+}
